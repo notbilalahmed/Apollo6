@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Refugee Migration</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+<!-- Glight -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@1.0.9/dist/css/glightbox.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@1.0.9/dist/js/glightbox.min.js"></script>
+
+<!-- Boostrap CSS -->
+  <link href="../static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+  <link href="./static/css/style.css" rel="stylesheet">
+
+<!-- ======= Machine Learning script ======= -->
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const countrySelect = document.getElementById('country');
+            const selectedCountry = countrySelect.options[countrySelect.selectedIndex].value;
+            const resultDiv = document.getElementById('result');
+
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ country: selectedCountry })
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultDiv.innerHTML = 'Country of Asylum: ' + data.prediction;
+            });
+        }
+    </script> <!-- == End Machine Learning script == -->
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex justify-content-between align-items-center">
+
+        <div id="logo">
+            <!-- <a href="index.html"><img src="../static/img/logo.png" alt="site logo" class="my-image"></a> -->
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!--<h1><a href="index.html">Regna</a></h1>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Gaza Refugee Help</a></li>
+            <!-- <li><a class="nav-link scrollto" href="#intro">Intro</a></li> -->
+            <!-- <li><a class="nav-link scrollto" href="#obs1">Demographics</a></li> -->
+            <!-- <li><a class="nav-link scrollto " href="#obs2">Conflict and Disaster</a></li> -->
+            <!-- <li><a class="nav-link scrollto " href="#obs3">Refugee Movement</a></li>
+            <li><a class="nav-link scrollto " href="#obs4">Machine Learning</a></li>
+            <li><a class="nav-link scrollto " href="#conclusion">Conclusion</a></li> -->
+            <li><a class="nav-link scrollto" href="index copy.html">El-Nino Prediction</a></li>
+            <li><a class="nav-link scrollto " href="index1.html">Archaeological Prediction</a></li>
+
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Refugee Migration Trends & Predictions</h1>
+        <h2></h2>
+        </div>
+    </section><!-- End Hero Section -->
+
+<!-- ======= Start #main ======= -->
+    <main id="main">
+
+<!-- ======= About Section ======= -->
+        <section id="intro">
+            <div class="container" data-aos="fade-up">
+            <div class="row about-container">
+<div class="PSbg">
+                <div class="col-lg-12 content order-lg-1 order-2 project-section">
+                    <h2 class="title">Project Background</h2>
+                    <p>
+                        This project endeavors to analyze comprehensive datasets from the United Nations Refugee Agency (UNHCR) and other authoritative sources to uncover trends in migration patterns and devise a machine learning model focused on refugee movements. By examining critical data, including demographic profiles, asylum decisions, and the impact of conflicts and disasters, we aim to enhance our understanding of the various elements driving migration. Moreover, we are integrating the analysis of El Niño patterns, recognizing their significant influence on agricultural productivity and humanitarian needs. Additionally, we have developed a machine learning model to predict archaeological sites, acknowledging the importance of preserving cultural heritage while addressing current challenges. This multifaceted approach will enable us to make informed predictions, ultimately aiding in efficient resource allocation and crisis management.
+                    </p>
+                </div>
+                
+                <div class="col-lg-12 content order-lg-1 order-2 project-section">
+                    <h2 class="title">Project Summary</h2>
+                    <p>
+                        The last decade has witnessed a staggering escalation in the global refugee crisis, with the UNHCR reporting that we have surpassed 100 million displaced individuals as of 2022—representing over 1.2% of the world's population. Among these, more than 32.5 million are classified as refugees, with 76% originating from just six nations. Our project emphasizes the importance of precise predictions in addressing this humanitarian challenge. By accurately forecasting refugee movements, we can ensure timely and targeted aid delivery, facilitate the rebuilding of affected communities, and enable governments to prepare for potential influxes. Furthermore, our work on predicting El Niño patterns is crucial for farmers and policymakers, as it helps mitigate the adverse effects of drought and ensures food security in vulnerable regions. The integration of our archaeological site prediction model highlights the value of understanding historical contexts while addressing contemporary issues. Through these efforts, we aim to make a meaningful impact on both refugee populations and agricultural resilience.
+                    </p>
+                </div>
+            </div>                
+        </section><!-- End About Section -->
+        
+<!-- ======= Demographics Section =======  -->
+<section id="obs1">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Death Toll Israel</h3>
+                <p class="section-description">
+                    The map of Israel, dotted with numerous markers, poignantly depicts the heavy toll of war and terrorism over recent years. Each pin signifies a life lost, reflecting the profound suffering endured by individuals and families amid ongoing conflict. This stark visual representation serves as a grim reminder of the urgent need for dialogue and reconciliation, emphasizing the critical importance of striving for peace.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/Israel.jpeg" alt="Map of Israel">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="obs2">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Death Toll Gaza</h3>
+                <p class="section-description">
+                    The map illustrates the devastating impact of war and violence on Gaza between 2021 and 2023, marked by numerous pins representing the reported death toll. The ongoing conflict has resulted in immense suffering for the civilian population, raising urgent calls for international attention and intervention.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/Gaza.jpeg" alt="Map of Gaza with markers" class="responsive-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="obs3">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Hospitals</h3>
+                <p class="section-description">
+                    Our model analyzes historical data, geographical information, and current socio-political dynamics to identify potential hospital hotspots in Gaza. These predicted markers enable aid organizations to strategically redirect assistance, ensuring timely support reaches the most vulnerable populations.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/Hospitals.jpeg" alt="Map of hospitals in Gaza" class="responsive-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="obs1">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Damaged Agricultural Sites</h3>
+                <p class="section-description">
+                    Our machine learning model employs sophisticated analytical techniques to identify damaged agricultural sites in Gaza, highlighting the profound impact of ongoing conflict on food security. By integrating satellite imagery, crop yield data, and historical patterns of agricultural productivity, the model pinpoints areas suffering significant damage due to violence and instability. These predicted markers not only illustrate the extent of agricultural losses but also signify looming hunger crises for the affected populations. With this critical information, humanitarian organizations can efficiently redirect aid, prioritizing support for these regions to restore agricultural capacity, provide food security, and ultimately assist communities in rebuilding their livelihoods.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/W1.jpeg" alt="Map of Gaza with markers indicating agricultural damage" class="responsive-image">
+            </div>
+        </div>
+        <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="obs2">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Schools for Refugee Camps</h3>
+                <p class="section-description">
+                    In light of the ongoing humanitarian crisis in Gaza, our machine learning model has identified key locations of schools that could serve as critical points for refugee camps. By analyzing data related to conflict zones and population displacement, the model predicts areas where schools are likely to become overcrowded with displaced families seeking safety and shelter. These markers highlight the urgent need for humanitarian aid, including food, water, and medical supplies. By directing resources to these predicted hotspots, we can ensure that support reaches the most vulnerable populations, providing them with the necessary assistance during this dire time.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/W1.jpeg" alt="Map of Gaza with markers indicating potential refugee camps" class="responsive-image">
+            </div>
+        </div>
+        <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="obs3">
+    <div class="container" data-aos="fade-up">
+        <div class="section-content">
+            <div class="text-section">
+                <h3 class="section-title">Critical Roads for Aid Delivery</h3>
+                <p class="section-description">
+                    Using machine learning, our model has identified critical roads in Gaza that are at high risk of becoming impassable due to ongoing conflict. By analyzing data on conflict zones, infrastructure damage, and road conditions, the model predicts which routes are likely to be disrupted, affecting the delivery of humanitarian aid. These predicted markers help aid organizations plan alternative routes, ensuring that food, medical supplies, and other essential resources reach those in need without delay. By proactively identifying potential roadblocks, we can enhance the efficiency of aid distribution, providing timely support to affected populations and mitigating the impact of infrastructure damage.
+                </p>
+            </div>
+            <div class="image-section">
+                <img src="./static/img/W2.jpeg" alt="Map of Gaza with critical roads for aid delivery" class="responsive-image">
+            </div>
+        </div>
+        <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=======Refugee Movement Section =======  -->
+    <section id="obs3">
+        <div class="container">
+            <div class="section-header">
+            <h3 class="section-title">Refugee Movement</h3>
+            <div class="flourish-embed flourish-sankey" data-src="visualisation/13124659"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <p class="section-description">Refugee movement from Origin to Asylum</p>
+            </div>
+            <div class="row counters">
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p></p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="534" data-purecounter-duration="1" class="purecounter"></span>
+                <p></p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p></p>
+            </div>
+
+            <div class="col-lg-3 col-6 text-center">
+                <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+                <p></p>
+            </div>
+            </div>
+        </div>
+        </section>
+
+<!-- ======= Machine Learning Section ======= -->
+        <section id="obs4">
+            <div class="container">
+            <div class="section-header">
+                <!-- <h3 class="section-title">Machine Learning</h3> -->
+
+                <!-- <p>The employed Decision Tree Classifier machine learning model yielded a precision-weighted average score of 63%, which was improved by refining the input data to include the top 20 countries of origin and their corresponding top 20 countries of asylum. Use the dropdown menu below to select a country of interest to see the precited country of asylum. </p> -->
+
+                <!-- <p><b>Ethical Considerations:</b>
+                Refugee migration is a complex and involves various factors such as political instability (war), human rights violations, environmental degradation, and economic hardship. Machine learning models are not well-equipped to capture the nuances and uncertainties of such a dynamic and sensitive issue. Therefore, it is important to note that machine learning models should not be used as the sole or primary source of information for decision-making on refugee migration policies and interventions.</p> -->
+
+                <form method="post" onsubmit="submitForm(event)">
+                <div class="center-dropdown">
+                    <!-- <label for="country">Select Country of Origin : </label> -->
+                    <select name="country" id="country">
+                        {% for country in countries %}
+                        <!-- <option value="{{ country }}">{{ country }}</option> -->
+                        {% endfor %}
+                    </select>
+                    <!-- <input type="submit" value="Predict" > -->
+                </form>
+                </div>
+                <div id="result" class="section-description"></div>
+                </div>
+            </div>
+        </section><!-- End Machine Learning Section -->
+    
+<!-- ======= Conclusion ======= -->
+        <section id="conclusion">
+            <div class="container">
+                <div class="row" data-aos="zoom-in">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3 class="cta-title">Conclusion</h3>
+                    <p class="cta-text"> In conclusion, our project aims to address critical global challenges by combining advanced machine learning techniques to analyze migration trends, predict El Niño patterns, and identify archaeological sites. By enhancing our understanding of these interconnected issues, we strive to facilitate effective resource allocation, improve humanitarian responses, and safeguard cultural heritage. Through collaboration and innovation, we hope to contribute valuable insights that empower policymakers and communities, ultimately promoting resilience and sustainability in the face of climate change and human displacement.</p>
+                </div>
+                </div>
+            </div>
+            </section><!-- End Conclusion Section -->
+
+<!-- ======= Team Section ======= -->
+        <section id="team">
+            <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <!-- <h3 class="section-title">Team</h3> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                <!-- <div class="member" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Rahma, Ali</h4>
+                    <span>SQL Database and Data Transforming</span>
+                    <div class="social">
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div> -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                </div>
+            </div>
+            </div>
+        </section><!-- End Team Section -->
+
+    </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+
+        <footer id="footer">
+            <div class="footer-top">
+            <div class="container"> 
+            </div>
+            </div>
+        
+            <div class="container">
+            <div class="credits">
+                <!-- Initial template design by <a href="https://bootstrapmade.com/">BootstrapMade</a>, modified by Team -->
+            </div>
+            </div>
+        </footer><!-- End Footer -->
+    
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        
+        <!-- Bootstrap JS Files -->
+        <script src="../static/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Template Main JS File -->
+        <script src="../static/js/app.js"></script>
+</body>
+</html>
+
+<!-- =======================================================
+* Template Name: Regna - v4.10.0
+* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
